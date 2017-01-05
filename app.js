@@ -15,7 +15,7 @@ ReactDOM.render(<Router history={hashHistory}>
 
     <Route path="/" component={IndexPage}  />
     <Route path="list" component={ListPage}  />
-    <Route path="detail" component={DetailPage} />
+    <Route path="detail(:goodsID)" component={DetailPage} />
 
 </Router>,document.getElementById("root"));
 
