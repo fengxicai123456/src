@@ -8,20 +8,24 @@ import {Router,Route,hashHistory} from "react-router"
 import IndexPage from "./main/indexPage"
 import ListPage from "./main/listPage"
 import DetailPage from "./main/detailPage"
-
-
-
+import LoginPage from './main/loginPage'
+import MyXiuPage from './main/myXiuPage'
+import registerPage from './main/register'
+import MorePage from './main/morePage'
+import ChangePwdPage from './main/changePwdPage'
+import FeedbackPage from './main/feedbackPage'
 ReactDOM.render(<Router history={hashHistory}>
 
     <Route path="/" component={IndexPage}  />
     <Route path="list" component={ListPage}  />
     <Route path="detail" component={DetailPage} />
-
+    <Route path="myXiu" component={MyXiuPage} />
+    <Route path="login" component={LoginPage} />
+    <Route path="register" component={registerPage} />
+    <Route path="more" component={MorePage} />
+    <Route path="changePwd" component={ChangePwdPage} />
+    <Route path="feedback" component={FeedbackPage} />
 </Router>,document.getElementById("root"));
-
-
-
-
 
 if (module.hot) {
     module.hot.accept();

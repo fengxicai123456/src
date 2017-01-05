@@ -1,0 +1,84 @@
+
+section{
+    background-color:  #f7f7f7;
+}
+section .f-registerBox{
+    width:100%;
+    height:auto;
+    padding: 0.55rem 0.34rem 0;
+    box-sizing: border-box;
+}
+section .f-registerBox .f-registerMsg{
+    width:100%;
+    height: .7rem;
+    line-height: .7rem;
+    font-size: 0.3rem;
+    margin-bottom: .36rem;
+}
+section .f-registerBox .f-registerMsg input{
+    width:100%;
+    height:100%;
+    border-radius: 0.2rem;
+    padding-left: 0.23rem;
+    box-sizing: border-box;
+    border:1px solid #b6b6b6;
+}
+section .f-registerBox .f-registerMsg i{
+    display: block;
+    line-height: 0.3rem;
+    color: red;
+    font-size:0.20rem;
+    display: none;
+}
+section .f-registerBox .f-registerAboutPwd{
+    margin:0;
+    margin-top: -0.2rem;
+}
+section .f-registerBox .f-registerAboutPwd .f-remindPwd{
+    width: .34rem;
+    height:.34rem;
+    background-color: #fff;
+    display: inline-block;
+    border: 1px solid #b6b6b6;
+    margin-right:0.1rem;
+}
+section .f-registerBox .f-registerAboutPwd .f-remindPwd img{
+    width: .34rem;
+    height:.34rem;
+}
+section .f-registerBox .f-registerAboutPwd .f-remindPwd.active{
+
+
+    background-color: darkred ;
+    /*background:url(img/register/true.jpg) no-repeat center center;*/
+    background-size: .34rem .34rem;
+}
+section .f-registerBox .f-registerAboutPwd .f-forgetPwd{
+    text-decoration: underline;
+    color: #b6b6b6;
+}
+section .f-registerBox .f-registerMsg .f-registerBtn{
+    background-color: #b11f1f;
+    text-align: center;
+    font-size: 0.45rem;
+    color: #fff;
+}
+section .f-registerBox .f-registerMsg .f-registerBtn-block{
+    background-color: #b6b6b6;
+}
+section .f-registerBox .f-registerMsg .f-changePwdBtn{
+    background-color:forestgreen;
+}
+section .f-registerBox .f-registerMsg textarea{
+    width:100%;
+    height:150px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+section .f-registerBox .f-opinion{
+    height:auto;
+}
