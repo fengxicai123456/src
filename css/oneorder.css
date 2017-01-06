@@ -1,0 +1,115 @@
+.sub-list {
+	 position: absolute;
+    top: 43px;
+    left: 0;
+    width: 100%;
+    height:30px;
+    line-height: 30px;
+    background-color: #FFFFFF; }
+    .sub-list ul {
+    height: 100%;
+    white-space: nowrap; }
+.sub-list li {
+	float: left;
+    display: inline-block;
+    color: #000;
+    width: 20%; 
+    text-align: center;
+    }
+ .sub-list .active{
+    	
+    	color: greenyellow;
+    }
+.order{
+width: 100%;
+
+}
+.order li{
+width: 100%;
+height: 220px;
+margin-top: 10px;	
+background-color: #FFFFFF;	
+}
+.order .proimg{
+width: 100%;
+height: 50%;	
+border-bottom: 1px solid #f2f2f2;
+} 
+.order .procount{
+height: 20%;
+border-bottom: 1px solid #f2f2f2;
+font-size:14px ;	
+}
+.order .propay{
+height: 30%;	
+font-size:14px ;
+}
+.order .oimg{
+width: 30%;
+height: 100%;
+float: left;	
+}
+.order .proimg  img{
+	width: 100%;
+	height: 100%;
+	padding:10%;
+}
+.order .proimg p{
+	float: right;
+	width: 70%;
+	height: 100%;
+	padding: 3%;
+}
+.order .proimg p span{
+	display: block;
+	font-size:14px ;
+}
+.order .proimg .left{
+	width: 60%;
+	float: left;
+}
+.order .proimg .right{
+	width: 40%;
+	float: right;
+	text-align: right;
+	height: 100%;
+}
+.order .proimg .right span{
+	height: 30%;
+}
+.order .proimg .right .price{
+	color: #ff8105;
+}
+.order .procount i{
+	color:#ff8105 ;
+}
+.order .procount .count{
+	display: block;
+	float: right;
+	height: 100%;
+	padding-top: 4%;
+	padding-right: 3%;
+	text-align: center;
+}
+.order .propay span{
+	display: block;
+	height: 100%;
+	float: left;
+	padding: 6%;
+		color: #ff8105;
+		font-size: 16px;
+}
+.order .propay div{
+	float: right;	
+	height: 100%;
+	width: 50%;
+    padding-top: 5%;
+	
+}
+.order .propay div input{
+	border: 1px solid #f2f2f2;
+	width: 40%;
+	border-radius: 5%;
+	margin-left:5% ;
+	height:60%;
+}
