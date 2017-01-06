@@ -41,6 +41,17 @@ let Action = {
             console.log(name+i);
         })
     },
+    userName:function(){
+        let loginName = localStorage.getItem("userName");
+        return loginName
+    },
+    userWatchLog:function(){
+        let userLog = localStorage.getItem("userLog");
+        return JSON.parse(userLog||"[]")
+    },
+    clearLog : function(){
+        let userLog = localStorage.removeItem('userLog')
+    }
 
 };
 

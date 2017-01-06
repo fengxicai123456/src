@@ -106,7 +106,9 @@ html, body {
     background-color: #9a9fa5; }
 .sub-header ul {
     height: 100%;
-    white-space: nowrap; }
+    white-space: nowrap;
+    overflow-y: scroll;
+}
 .sub-header li {
     display: inline-block;
     color: #fff;

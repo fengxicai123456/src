@@ -60,3 +60,36 @@
 .f-myXiuBox .f-myOrder .f-myOrder-list b{
     float: right;
 }
+.myXiuPay{
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+
+}
+.myXiuPay .payMark{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+}
+.myXiuPay .payImg{
+    width:60vw;
+    margin:20vw;
+    position: absolute;
+    z-index: 99;
+}
+.myXiuPay .payImg img{
+    width:100%;
+
+}
+.myXiuPay .payImg p{
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    color:#fff;
+}

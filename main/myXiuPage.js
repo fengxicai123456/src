@@ -49,9 +49,9 @@ class UserOrder extends Component {
         return (
             <div className="f-myOrder">
                 <p className="f-myOrder-list" onClick={()=>window.location.hash = 'order'}>我的订单<b>></b></p>
-                <p className="f-myOrder-list">我的优惠券<b>></b></p>
-                <p className="f-myOrder-list">浏览记录<b>></b></p>
-                <p className="f-myOrder-list">我的收藏<b>></b></p>
+                <p className="f-myOrder-list" onClick={()=>alert('暂未开放此功能')}>我的优惠券<b>></b></p>
+                <p className="f-myOrder-list" onClick={()=>window.location.hash = 'log'}>浏览记录<b>></b></p>
+                <p className="f-myOrder-list" onClick={()=>window.location.hash = 'collect'}>我的收藏<b>></b></p>
             </div>
         )
     }
@@ -60,11 +60,26 @@ class UserOrder extends Component {
 class MyXiuPage extends Component {
     constructor(props){
         super(props)
+        this.state = {
+            pay : false
+        }
+    }
+    pay(){
+      this.setState({
+          pay : true
+      })
+    }
+    closePay(){
+        this.setState({
+
+            pay : false
+        })
     }
     render(){
+        var payStyle = {'display' : this.state.pay?'block':'none'}
         return  (
             <div className="page" id="list-page">
-                <Header title="我的秀" hasBack={false} rightBtn={<a>充值</a>} has  />
+                <Header title="我的秀" hasBack={false} rightBtn={<a onClick={()=>this.pay()}>充值</a>} has  />
                 <Content hasFooter={true} hasSubHeader={false}  >
 
 
@@ -75,6 +90,13 @@ class MyXiuPage extends Component {
                             <UserMsg />
 
                             <UserOrder />
+                            <div className="myXiuPay" style={payStyle}>
+                                <div className="payMark" onClick={()=>this.closePay()}></div>
+                                <div className="payImg">
+                                    <img src="img/myXiu/pay.jpg" alt=""/>
+                                    <p>微信扫一扫充值</p>
+                                </div>
+                            </div>
                         </div>
                     </section>
 
