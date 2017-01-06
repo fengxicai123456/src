@@ -3,6 +3,7 @@ import ProductList from "../components/product-list"
 import {ScrollOptions} from "../config/config"
 import React, {Component} from  "react"
 import ReactIScroll from "react-iscroll"
+import '../css/list.css'
 /*import iScroll from "iscroll/build/iscroll-probe"
 
 console.log(iScroll);*/
@@ -18,16 +19,26 @@ console.log(ScrollOptions)
 class ClassList extends Component　{
     constructor(props){
         super(props)
+        this.state = {
+            activeIndex : 0
+        }
     }
-    handleClick(id){
-        console.log(id);
+    handleClick(id,i){
+        //console.log(id);
+        console.log(i)
         this.props.changeClassID(id);
+        this.setState({
+            activeIndex : i
+        })
     }
     render (){
+       // console.log(this.state.activeIndex)
+        //console.log((this.state.activeIndex == 0 ? 'active' :
+         //   ''))
         return (
             <ul className="class-list">
                 {
-                    this.props.classData.map((ele,i)=><li onClick={()=>this.handleClick(ele.classID)}  key={i}>{ele.className}</li>)
+                    this.props.classData.map((ele,i)=><li className={(this.state.activeIndex == i ? 'action' : '')} onClick={()=>this.handleClick(ele.classID,i)}  key={i}>{ele.className}</li>)
                 }
             </ul>
         )
@@ -49,8 +60,8 @@ class ListPage extends Component {
             productData:[],
         };
         //设置默认的数据请求选项
-        this.classID = undefined;
-        this.linenumber = 5;
+        this.classID = 1;
+        this.linenumber = 8;
         this.pageCode = 0;
         this.refresh = false;
         $.get("http://datainfo.duapp.com/shopdata/getclass.php",(data)=>{
@@ -67,8 +78,8 @@ class ListPage extends Component {
         this.onScrollEnd = this.onScrollEnd.bind(this)
     }
     changeClassID(id){
-        console.log(id);
-        console.log(this)
+        //console.log(id);
+       // console.log(this)
         this.classID = id;
         this.pageCode = 0; //重置页面
         this.getProductData()
@@ -114,7 +125,7 @@ class ListPage extends Component {
         console.log("render");
         return (
             <div className="page" id="list-page">
-                <Header title="列表" hasSearch={true} rightBtn={<a>结算</a>}  />
+                <Header title="列表" rightBtn={<a className="iconfont icon-gouwuche1"></a>}  />
                 <SubHeader>
                     <ClassList changeClassID={(id)=>this.changeClassID(id)}  classData={this.state.classData} />
                 </SubHeader>

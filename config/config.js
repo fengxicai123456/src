@@ -4,7 +4,8 @@
 
 const ScrollOptions={
     probeType:2,
-    scrollbars:true
+    scrollbars:true,
+    click : true
 };
 
 /*const appConfig ={
