@@ -25,7 +25,7 @@ class More extends Component {
             <div className="f-more">
                 <p className="moreData" onClick={()=>this.changePwd()} >修改密码<i>&gt;</i></p>
                 <p className="moreData" onClick={()=>location.hash='feedback'} >用户反馈<i>&gt;</i></p>
-                <p className="moreData" >关于<i>&gt;</i></p>
+                <p className="moreData" onClick={()=>alert('版权所有---"三人行工作室"')} >关于<i>&gt;</i></p>
                 <div  className="exitLogin">
                     <button onClick={()=>{localStorage.removeItem("userName");alert('退出登录成功')}}>退出登录</button>
                 </div>
