@@ -1,0 +1,92 @@
+.cart-list{
+	width: 100%;
+	height: auto;
+}
+.cart-list li{
+	width: 100%;
+	height: 110px;
+	font-size: 14px;
+	background-color: #FFF;
+	border-bottom: 1px solid  #f2f2f2;
+}
+.cart-bar{
+	width: 100%;
+	height: 100%;
+}
+.cart-bar span{
+	display: block;	
+	float: left;
+	text-align: center;
+	white-space: nowrap;
+	font-size: 14px;
+}
+.cart-bar .cart-left{
+width: 40%;
+	height: 100%;	
+}
+.cart-bar .cart-right{
+width: 60%;
+	height: 100%;
+	text-align: left;	
+}
+.cart-bar .cart-zong{
+	color: #ff8105;
+	}
+.cart-item .pic{
+	display: block;
+	width: 30%;
+	height: 100%;
+	float: left;
+}
+.cart-item .pic img{
+ width: 100%;
+ height: 100%;
+ padding: 10%;	
+ 
+}
+.cart-item .info{
+	padding-top: 4%;
+	width: 60%;
+	height: 100%;
+	float: left;
+}
+.cart-item .info p{
+	margin-bottom: 4%;
+}
+.cart-item .delete{
+	display: block;
+	width: 10%;
+	height: 20%;
+	float: left;
+	margin-top:4%;
+	color: #000000;
+	text-align: center;
+}
+.cart-item .p-name{
+	width: 90%;
+}
+.cart-item .money{
+	margin-left: 3%;
+}
+.cart-item .num-wrap input{
+	border:1px solid #C0C0C0;
+	width: 20%;
+	text-align: center;	
+	float: left;
+	border-radius: 3px;
+}
+.cart-item .num-wrap span{
+	display: block;
+	float: left;
+}
+.cart-item .num-wrap .minus,.plus{
+background-color:#606060;
+margin-left: 3%;
+margin-right: 3%;
+width: 15%;
+border: 1 solid #C0C0C0;
+display: block;
+float: left;
+text-align: center;
+border-radius: 3px;
+}

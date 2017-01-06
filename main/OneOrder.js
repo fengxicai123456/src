@@ -16,7 +16,6 @@ class SubList extends Component {
             <div className="sub-list">{this.props.children}</div>
         )
     }
-
 }
 /*二级列表标签ul*/
 class SubUl extends Component　{
@@ -53,7 +52,6 @@ constructor(props){
 	super(props);
 	
 }
-
 	render (){
 		console.log(11111111)
 		return(
@@ -72,20 +70,16 @@ constructor(props){
                      </li>)
                  }
 			</ul>
-		)
-		
-	}
-	
+		)		
+	}	
 }
 /*商品页面的顶层组件*/
 class OneOrder extends Component {
     constructor(props){
         super(props) ;//让react 的Component 帮你实现组件的方法
-        this.state= {
-            
+        this.state= {            
             productData:[],
-        };
-       
+        };      
         //设置默认的数据请求选
         this.classID = 1;
         this.linenumber = 5;
@@ -102,8 +96,7 @@ class OneOrder extends Component {
         console.log(id);
         console.log(this)
         this.classID = id;
-        //滚动条回到顶部
-        
+        //滚动条回到顶部      
     }
       getProductData(){
         $.getJSON("http://datainfo.duapp.com/shopdata/getCar.php?userID=fengxicai&callback=?",{
@@ -124,7 +117,7 @@ class OneOrder extends Component {
         console.log("render");
         return (
             <div className="page" id="list-page">
-                <Header title="我的订单" hasSearch={true} rightBtn={" "} hasBack={false}/>           
+                <Header title="我的订单" hasSearch={true} rightBtn={" "} hasBack={true}/>           
                 <SubList>
                  <SubUl changeClassID={(id)=>this.changeClassID(id)}  />
                 </SubList>

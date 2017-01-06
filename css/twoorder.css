@@ -76,6 +76,13 @@ border-bottom: 1px solid #f2f2f2;
      	font-size: 14px;
      	white-space: nowrap;
      }
+ .user-name .box .massage .dianhua{
+ 	 	padding-left: 0;
+ 	 	width: 6%;
+ }  
+  .user-name .box .massage .phone{
+  	padding-left: 0;
+  }  
 .balance{
 width: 100%;
 height: auto;	
@@ -96,6 +103,9 @@ margin-bottom: 3%;
 	display: block;
 	float: right;
 }
+.balance .remark  .right2{
+	color: #ff8105;
+}
 .balance .remark  .left1,.left2{
 	display: block;
 	float: left;
@@ -112,7 +122,18 @@ height: 50px;
 background-color: #FFFFFF;
 border-bottom: 1px solid #f2f2f2;	
 margin-bottom: 3%;
+position: relative;
 	
+}
+.balance .ticket .ticketleft{
+	width:45% ;
+	height: 100%;
+	margin-left:3%;
+	padding-top: 5%;
+	display: block;
+}
+.balance .ticket .ticketleft i{
+	color: #00FF00;
 }
 .balance .balance-count{
 	
@@ -121,7 +142,35 @@ height: 50px;
 background-color: #FFFFFF;
 border-bottom: 1px solid #f2f2f2;	
 }
+.balance .balance-count span{
+	display: block;
+	float: left;
+	height: 100%;
+	font-size: 14px;
+	padding-top: 3%;
+}
+.balance .balance-count .balanceleft{
+margin-left: 3%;	
+}
+.balance .balance-count .balancenumber{
+	color:#ff8105;
+}
+.balance .balance-count input{
+	float: right;
+	background-color: #ff7f00;
+	width: 30%;
+	height: 50%;
+	border-radius: 3px;
+	margin-right: 3%;
+	margin-top: 3%;
+}
 /* .slideOne */
+.balance .ticket  section{
+position: absolute;
+right: 8%;
+top: 0;
+background-color: #FFFFFF;
+}
 .slideOne {
   width: 50px;
   height: 10px;
@@ -164,5 +213,7 @@ border-bottom: 1px solid #f2f2f2;
 .slideOne input[type=checkbox]:checked + label {
   left: 37px;
 }
+
+
 
 
