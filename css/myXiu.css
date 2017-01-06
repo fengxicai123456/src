@@ -1,0 +1,62 @@
+.f-myXiuBox{
+    width:100%;
+    height:7.36rem;
+    padding:0.65rem 0.3rem 0;
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+}
+.f-myXiuBox .f-userMsg{
+    height:1.62rem;
+    width:100%;
+    display: flex;
+    margin-bottom: 0.83rem;
+}
+.f-myXiuBox .f-userMsg .f-userImg{
+    width:1.68rem;
+    height:1.62rem;
+}
+.f-myXiuBox .f-userMsg .f-userImg img{
+    width:100%;
+    height:100%;
+
+}
+.f-myXiuBox .f-userMsg .f-userName{
+    margin-left: 0.34rem;
+    font-size: 0.36rem;
+}
+
+.f-myXiuBox .f-userMsg .f-userName dt{
+    line-height: 0.98rem;
+}
+.f-myXiuBox .f-userMsg .f-userName dd span{
+    display: inline-block;
+    margin-right: 0.44rem;
+    height:0.57rem;
+    width:1.1rem;
+    text-align: center;
+    line-height: 0.57rem;
+    color: #fff;
+    border-radius: 0.10rem;
+    background-color: #e93c71;
+}
+.f-myXiuBox .f-myOrder{
+    font-size: 0.36rem;
+    height: 3.6rem;
+    width: 100%;
+    border:1px solid #b6b6b6;
+    border-radius: 0.2rem;
+}
+.f-myXiuBox .f-myOrder .f-myOrder-list{
+    width: 100%;
+    height: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding:0 0.3rem;
+    line-height: 0.9rem;
+}
+.f-myXiuBox .f-myOrder .f-myOrder-list+.f-myOrder-list{
+    border-top:1px solid #b6b6b6;
+}
+.f-myXiuBox .f-myOrder .f-myOrder-list b{
+    float: right;
+}

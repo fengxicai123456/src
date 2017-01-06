@@ -37,6 +37,7 @@ button, input[type="submit"] {
 a {
     touch-callout: none;
     text-decoration: none;
+    color: #fff;
     -webkit-tap-highlight-color: transparent; }
 
 i, em {
@@ -142,17 +143,36 @@ html, body {
     bottom: 0;
     height: 48px;
     line-height: 48px;
-    background-color: #484850; }
-.footer .footer-list {
-    height: 100%; }
-.footer .footer-list li {
-    float: left;
-    width: 20%;
-    text-align: center; }
-.footer .footer-list a { display:
-block;color: #fff; }
-.footer .footer-list .active { color: red}
+    background-color: #484850;
+    display: flex;
+    text-align: center;
+    color: #fff;
 
+}
+.footer .footer-list {
+    flex: 1;
+    font-size: 0.3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.footer .footer-list .iconfont{
+    height: 24px;
+    line-height:24px;
+    font-size:0.26rem;
+    text-align: center;
+
+
+}
+.footer .footer-list b{
+    font-weight: normal;
+    line-height:24px;
+}
+.footer .footer-list.active{
+    color: #e4366b;
+}
 
 
 

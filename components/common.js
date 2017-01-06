@@ -4,6 +4,9 @@
 
 import "../css/common.css"
 import React,{Component} from "react"
+//import 'http://at.alicdn.com/t/font_2h3snnwm1zcl3di.css'
+
+
 
 class Header extends Component {
     constructor(props) {
@@ -14,7 +17,7 @@ class Header extends Component {
         return <div className="header">
             <ul className="header-list">
                 <li className="header-btn">
-                    {this.props.hasBack?<a href={()=>window.history.go(-1)}>{"<"}</a>:""}
+                    {this.props.hasBack?<a onClick={()=>history.back()} href={()=>window.history.go(-1)}>{"<"}</a>:""}
 
                 </li>
                 <li className="header-tit">{this.props.title}</li>
@@ -36,21 +39,39 @@ class Footer extends Component {
         super(props)
     }
     render () {
-        return <div className="footer">
-            <ul className="footer-list">
-                {
-                    this.props.footerData.map((ele,i)=><li key={i}>
-                        <a className={i==this.props.active?"active":""}>{ele}</a>
-                    </li>)
-                }
-            </ul>
-        </div>
+        return <footer className="footer">
+            {
+                this.props.footerData.map((ele,i)=>
+                    <p onClick={()=>location.hash= ele.hash } className={"footer-list " + (this.props.active == i? 'active':'')}  key={i}><i className={'icon iconfont ' + ele.icon}></i><b className="footlist-name">{ele.title}</b></p>
+                )
+            }
+
+        </footer>
     }
 }
 Footer.defaultProps={
-    footerData:["首页","列表","购物车","我的","更多"]
+    footerData:[{icon : 'icon-shouye-copy' , title : '首页' , hash : '/'},
+                {icon : 'icon-fenlei' , title : '分类' , hash : 'list'},
+                {icon : 'icon-gouwuche1' , title : '购物车' , hash : 'cart'},
+                {icon : 'icon-wode5' , title : '我的秀' , hash : 'myXiu'},
+                {icon : 'icon-gengduo' , title : '更多' , hash : 'more'}
+                ]
 };
+/*
 
+
+
+
+
+<footer class="childPage">  // <a className={i==this.props.active?"active":""}>{ele}</a>
+    <p class="footer-list"><i class="iconfont icon-shouyeshouye"></i><b class="footlist-name">首页</b></p>
+    <p class="footer-list"><i class="iconfont icon-wefill"></i><b class="footlist-name">分类</b></p>
+    <p class="footer-list"><i class="iconfont icon-cart"></i><b class="footlist-name">购物车</b></p>
+    <p class="footer-list active"><i class="iconfont icon-peoplelist"></i><b class="footlist-name">我的秀</b></p>
+    <p class="footer-list"><i class="iconfont icon-faxian2-copy"></i><b class="footlist-name">更多</b></p>
+</footer>
+
+*/
 
 
 class Content extends Component {
