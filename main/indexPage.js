@@ -40,7 +40,7 @@ class ClassList extends Component　{
         	console.log(data)
        		this.setState({
        			indexDatalist:data,
-       			bannerList:JSON.parse(data[1].goodsBenUrl)
+       			bannerList:JSON.parse(data[0].goodsBenUrl)
        		})
        	
         	 
@@ -88,7 +88,7 @@ class ClassList extends Component　{
                		</div>
                </Content>
                
-               <Footer></Footer>
+               <Footer active={0}></Footer>
             </div>
         )
     }

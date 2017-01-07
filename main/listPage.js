@@ -125,7 +125,7 @@ class ListPage extends Component {
         console.log("render");
         return (
             <div className="page" id="list-page">
-                <Header title="列表" rightBtn={<a className="iconfont icon-gouwuche1"></a>}  />
+                <Header title="列表"  hasBack={false} rightBtn={<a className="iconfont icon-gouwuche1"></a>}  />
                 <SubHeader>
                     <ClassList changeClassID={(id)=>this.changeClassID(id)}  classData={this.state.classData} />
                 </SubHeader>

@@ -79,6 +79,10 @@ class GoodsDetail extends Component {
         },3000)
         console.log(Action.userName())
         let userName = Action.userName()
+        if(!userName){
+            alert('您还没有登录,请登录')
+            location.hash = 'login'
+        }
         let number = 1;
         let goodsID = this.state.goodsID
         $.getJSON("http://datainfo.duapp.com/shopdata/getCar.php?callback=?",{userID : userName},function(data){

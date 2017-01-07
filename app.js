@@ -16,12 +16,8 @@ import registerPage from './main/register'
 import MorePage from './main/morePage'
 import ChangePwdPage from './main/changePwdPage'
 import FeedbackPage from './main/feedbackPage'
-
-import Hyk from'./main/cs-hyk'
-
 import DeatailPage from './main/detailPage'
 import LogPage from './main/logPage'
-
 
 ReactDOM.render(<Router history={hashHistory}>
     <Route path="/" component={IndexPage}  />
@@ -39,7 +35,7 @@ ReactDOM.render(<Router history={hashHistory}>
     <Route path="/detail(/:goodsID)" component={DeatailPage} />
     <Route path="/log" component={LogPage} />
     <Route path="/collect" component={LogPage} />
-    <Route path="/hyk" component={Hyk} />
+ 
 </Router>,document.getElementById("root"));
 
 if (module.hot) {
