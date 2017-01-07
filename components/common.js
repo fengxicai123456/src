@@ -50,7 +50,7 @@ class Footer extends Component {
     }
 }
 Footer.defaultProps={
-    footerData:[{icon : 'icon-shouye-copy' , title : '首页' , hash : 'index'},
+    footerData:[{icon : 'icon-shouye-copy' , title : '首页' , hash : '/'},
                 {icon : 'icon-fenlei' , title : '分类' , hash : 'list'},
                 {icon : 'icon-gouwuche1' , title : '购物车' , hash : 'car'},
                 {icon : 'icon-wode5' , title : '我的秀' , hash : 'myXiu'},

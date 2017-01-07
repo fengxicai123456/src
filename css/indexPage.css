@@ -1,0 +1,31 @@
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('../iconfont/iconfont.eot');
+  src: url('../iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('../iconfont/iconfont.woff') format('woff'),
+  url('../iconfont/iconfont.ttf') format('truetype'),
+  url('../iconfont/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+body,html{width:100%;height:100%;overflow: hidden;}
+.lbt{width:100%;height:116px;background:#f0f;}
+.indexWapper img{width: 100%;height:116px}
+#detail-page .indexWapper{height:116px}
+.iconf-list-index{float:left;padding:17px 0;background-color:#f3f3f3;}
+.iconf-list-index li{width:75px;height:74px;float:left;font-size:16px;text-align: center;}
+.iconf-list-index em{font-size:32px;}
+.iconf-list-index a{color:#000000;font-family: "微软雅黑";}
+.iconf-list-index  .index-banner{width:calc(100vw - 20px);margin:10px 10px;height: 40px;line-height: 40px;background-color:#fff ;border-radius: 8px;}
+.index-banner span{font-family: "微软雅黑";margin-right: 15px;}
+.index-banner a{background-color: #B11F1F;color:#fff;width:20px;padding:5px;border-radius: 5px solid #fff;}
+.index-detail{font-size: 16px;text-align: center;font-family: "微软雅黑";}
+.index-jump{height:40px;background-color:#B11F1F ;width: 30vw;border-radius: 15px;margin:20px auto;}
+.index-jump a{display: block;height:30px;line-height: 40px;text-align:center;color:#fff;font-size: 20px;font-family: "微软雅黑";}
+
