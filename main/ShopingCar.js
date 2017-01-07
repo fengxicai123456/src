@@ -1,5 +1,5 @@
 import {Header,Footer,Content,SubHeader} from  "../components/common"
-import {Tools} from  "../tools/tools"
+import {Action} from  "../tools/tools"
 import React, {Component} from  "react"
 import "../css/shopingcar.css"
 
@@ -40,8 +40,7 @@ class ShopingCar extends Component {
             totalNumber:0,
             totalPrice:0
         };
-
-        var id = 'fengxicai';
+        var id = Action.userName();
         id && $.getJSON("http://datainfo.duapp.com/shopdata/getCar.php?callback=?",{userID:id},(data)=>{
             console.log(data);
             this.setState({
@@ -60,8 +59,10 @@ class ShopingCar extends Component {
         var data = this.state.cartData;
         var id = data[index].goodsID;
         var number = data[index].number;
+        
         if(type){
             //加减
+            if(number<=1&&type == -1){return}
             number=type+number*1;
             data[index].number = number
         }else {
@@ -88,13 +89,13 @@ class ShopingCar extends Component {
             totalPrice:price
         });
     }
-    toConfirm(){
+    toConfirm(){     
         window.localStorage.setItem("cartData",JSON.stringify({
             totalPrice:1,
             totalNumber:1,
             productInfo:this.state.cartData
         }));
-        window.location.hash="#/confirm"
+        window.location.hash="#/two"
     }
     render() {
       /*  var number = 0;
@@ -107,7 +108,7 @@ class ShopingCar extends Component {
 
         return (
             <div className="page" id="cart-page">
-                <Header title="购物车" rightBtn={<a href="javascript:;" onClick={()=>this.toConfirm()}>结算</a>} />
+                <Header title="购物车" rightBtn={<a  onClick={()=>this.toConfirm()}>结算</a>} />
                 <SubHeader>
                     <div className="cart-bar">
                         <span className="cart-left">{"商品总数:"+this.state.totalNumber}</span>

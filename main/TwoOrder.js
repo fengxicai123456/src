@@ -3,7 +3,7 @@ import {ScrollOptions} from "../config/config"
 import React, {Component} from  "react"
 import ReactIScroll from "react-iscroll"
 import "../css/twoorder.css"
-
+import {Action} from  "../tools/tools"
 /*二级列表数据*/
 var dataTowOrder=["全部","待付款","待发货","待收货","待评价"]
 /*标签div*/
@@ -17,7 +17,7 @@ class User extends Component {
             <div className="user-name">
             <div className="box">
             <p className="massage">
-            <span className="name">{"冯希才"}</span>
+            <span className="name">{Action.userName()}</span>
             <span className="icon iconfont icon-fenlei dianhua"></span><span className="phone">{"电话:"+1384381438}</span>
             </p>
             <p className="address"><span>{"地址:琉球岛"}</span></p>
@@ -34,6 +34,9 @@ class Balance extends Component {
          this.state = {
         	checked : true
         }
+    }
+    toConfirm(){
+        window.location.hash="#/order"
     }
     render () {
     	console.log(this.state.checked)
@@ -56,8 +59,8 @@ class Balance extends Component {
 			    </section>
             </div>
             <div className="balance-count">
-            <span className="balanceleft">共<span className="balancenumber">4</span>件,总金额<span className="balancenumber">￥0.0.4</span></span>
-            <input type="button" value="提交订单"/>
+            <span className="balanceleft">共<span className="balancenumber">4</span>件,总金额<span className="balancenumber">￥0.04</span></span>
+            <input type="button" value="提交订单" onClick={()=>this.toConfirm()}/>
             </div>
             </div>
         )
@@ -120,8 +123,10 @@ class TwoOrder extends Component {
         //滚动条回到顶部
         
     }
+   
       getProductData(){
-        $.getJSON("http://datainfo.duapp.com/shopdata/getCar.php?userID=fengxicai&callback=?",{
+      	console.log(Action.userName())
+        $.getJSON("http://datainfo.duapp.com/shopdata/getCar.php?userID="+Action.userName()+"&callback=?",{
         	"classID":this.classID,
             "linenumber":this.linenumber,
             "pageCode":this.pageCode
